@@ -1,0 +1,6 @@
+<?php
+/** Include PHPExcel */
+require_once '../PHPExcel/Classes/PHPExcel.php';
+
+$objPHPExcel = PHPExcel_IOFactory::load(str_replace('.php', '.xlsx', __FILE__));
+?>

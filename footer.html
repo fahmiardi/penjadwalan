@@ -1,0 +1,17 @@
+  </div>
+  
+  <?php
+    $dir = substr($_SERVER['PHP_SELF'], 0, -9);
+    if($_SERVER['PHP_SELF']==$dir."index.php"){
+	  echo<<<EOT
+	  <div class="footer">Best-viewed: Firefox 12+, Chrome 19+ (1280x768)
+	  <br/><span style="font-size:11px;">Developed by: f1sh@jundies.co.id</span></div>
+EOT;
+	//<br/><span style="font-size:11px; background:white;">Developed by: f1sh@jundies.co.id</span>
+	}
+  ?>
+  
+   
+</div>
+</body>
+</html>

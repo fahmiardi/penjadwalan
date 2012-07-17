@@ -1,0 +1,16 @@
+
+a { display:none; }
+
+p, #pointview { font-family:Verdana; font-size:20pt;
+ margin-top:20px; margin-bottom:20px; }
+
+td { font-size:12pt; font-family:Verdana; }
+
+.base, #formwrapper, #pointview , #fView, .footer, .newsheet, .subjad a, .op, .add, .label, #jlog, #header, span.heading, a.log, a.back, a.fback, a[title],
+#pointer, span#tutup { display:none; }
+
+#formprint { display:block; font-family:Verdana; font-size:20pt; }
+
+span.jad, span.sub, div.base { box-shadow:none; }
+
+#ocBView{ overflow:visible; } #ocBView td{ font-size:8pt; }

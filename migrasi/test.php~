@@ -1,0 +1,5 @@
+<?php
+	$ex = explode("-", "fahmiardi");
+	echo count($ex);
+	echo $ex[0];
+?>

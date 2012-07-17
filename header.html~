@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title><?php echo $page_title; ?></title>
+  
+<?php
+  $dir = substr($_SERVER['PHP_SELF'], 0, -9);
+  if($_SERVER['PHP_SELF']==$dir."index.php"){
+    echo<<<EOT
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+	<link rel="icon" type="img/png" href="img/fav.png"/>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.confirm-1.3.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/clock.js"></script>
+EOT;
+  }else{
+    echo<<<EOT
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="../css/print.css" media="print"/>
+	<link rel="icon" type="img/png" href="../img/favico.png"/>
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.confirm-1.3.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.colorbox.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/clock.js"></script>
+EOT;
+  }
+?>
+</head>
+<body>
+<div id="canvas">
+
+
+  <?php
+    
+    if(isset($_SESSION['adm_super'])){
+	  echo<<<EOT
+	  <div id="header">ADMINISTRATOR <font style="font-size:0.7em; color:#e0e0e0;">SUPER</font></div>
+EOT;
+	}elseif(isset($_SESSION['adm_univ'])){
+	  echo<<<EOT
+	  <div id="header">ADMINISTRATOR <font style="font-size:0.7em; color:#e0e0e0;">UNIVERSITAS</font></div>
+EOT;
+	}elseif(isset($_SESSION['adm_fak'])){
+	  echo<<<EOT
+	  <div id="header">ADMINISTRATOR <font style="font-size:0.7em; color:#e0e0e0;">FAKULTAS</font></div>
+EOT;
+	}elseif(isset($_SESSION['adm_prodi'])){
+	  echo<<<EOT
+	  <div id="header">ADMINISTRATOR <font style="font-size:0.7em; color:#e0e0e0;">PRODI</font></div>
+EOT;
+	}elseif(isset($_SESSION['nod'])){
+	  echo<<<EOT
+	  <div id="header">DOSEN</div>
+EOT;
+	}else{
+	  echo<<<EOT
+	  <div id="header">SISTEM PENJADWALAN KULIAH<br/><font style="font-size:12px">FAKULTAS ADAB DAN HUMANIORA, UIN SYARIF-HIDAYATULLAH JAKARTA</font></div>
+EOT;
+	}
+  ?>
+  
+  <div id="content">

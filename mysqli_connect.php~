@@ -1,0 +1,3 @@
+<?php
+$dbc=mysqli_connect('localhost', 'root', '', 'penjadwalan') or die('Can not connect to the database.');
+?>
